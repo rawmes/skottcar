@@ -1,10 +1,11 @@
 const canvas= document.getElementById("myCanvas");
 
-canvas.width = 200;
+canvas.width = 600;
 
 const ctx = canvas.getContext("2d");
 const road = new Road(canvas.width/2,canvas.width*0.9)
 const car = new Car(road.getLaneCenter(1),100,30,50);
+//const car2 = new Car(road.getLaneCenter(0),50,15,25);
 //car.draw(ctx);
 animate();
 
@@ -18,6 +19,7 @@ function animate(){
 	ctx.translate(0,-car.y+canvas.height*0.5);
 	road.draw(ctx);
 	car.draw(ctx);
+	//car2.draw(ctx)
 
 	ctx.restore();
 	requestAnimationFrame(animate);
