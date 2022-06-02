@@ -55,6 +55,7 @@ class Road{
 
 		//lane borders 
 		this.borders.forEach(border=>{
+			ctx.strokeStyle='cyan';
 			ctx.beginPath();
 			ctx.moveTo(border[0].x,border[0].y)
 			ctx.lineTo(border[1].x,border[1].y)
